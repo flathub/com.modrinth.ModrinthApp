@@ -1,8 +1,8 @@
 id: com.modrinth.ModrinthApp
 
 runtime: org.gnome.Platform
-runtime-version: "45"
-sdk: org.gnome.Sdk//45
+runtime-version: "46"
+sdk: org.gnome.Sdk//46
 
 rename-icon: modrinth-app
 command: modrinth-app
