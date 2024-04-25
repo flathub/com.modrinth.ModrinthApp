@@ -25,6 +25,57 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.7.1" date="2024-04-24" type="stable">
+      <url>https://github.com/modrinth/theseus/releases/tag/v0.7.1</url>
+      <description>
+        <p>Modrinth App v0.7.1 added support for Minecraft 1.20.5 and fixed a ton of bugs and issues.</p>
+        <p>Main improvements ⭐</p>
+        <ul>
+          <li>Minecraft authentication has been rewritten to match the official Minecraft Launcher, providing a much smoother login experience with fewer issues.</li>
+          <li>Added support for Java 21 and Minecraft 1.20.5.</li>
+          <li>Java installations are handled for you automatically by default for a more seamless experience, but can be manually configured in Settings.</li>
+          <li>Introduced better error handling to assist you with fixing problems, such as Minecraft authentication issues.</li>
+          <li>Modpacks with client-side only overrides will now be installed properly.</li>
+        </ul>
+        <p>Bugfixes 🐛</p>
+        <ul>
+          <li>No longer enables LWJGL debugging mode by default, potentially improving game performance.</li>
+          <li>Changing app directory to a different drive now properly moves all your files.</li>
+          <li>Live log will no longer glitch out and will not use as much memory.</li>
+          <li>Removed java_options flag that caused random fatal Java errors.</li>
+        </ul>
+        <p>What's next for Modrinth App? 👀</p>
+        <p>We're working on these, but they didn't quite make it into this release just yet! Keep an eye out for v0.8 in the coming weeks!</p>
+        <ul>
+          <li>Add support for recent versions of Minecraft Forge 🔨: Recent versions of the Forge installer have broken how we install Forge. We're working on implementing ForgeWrapper to more easily support Forge like other launchers do.</li>
+          <li>Improve logging for debug purposes 📜: Other launchers append extra data or create extra log files to provide more debugging information, and many users have provided feedback that Modrinth App not providing these makes it harder to provide support for Modrinth App users. We're working to improve our logging to be just as easy as other launchers.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.7.0" date="2024-04-23" type="stable">
+      <url>https://github.com/modrinth/theseus/releases/tag/v0.7.0</url>
+      <description>
+        <p>What's Changed</p>
+        <ul>
+          <li>Remove lwjgl debugging argument. by @qtchaos in #959</li>
+          <li>Switch from stdout log to latest log MOD-595 by @darling in #964</li>
+          <li>Config transfer by @thesuzerain in #951</li>
+          <li>adds credentials refresh save by @thesuzerain in #1030</li>
+          <li>Use Tokio directly instead of Tauri in io.rs by @KnifesmithCode in #1087</li>
+          <li>chore: update dependencies by @ToBinio in #1103</li>
+          <li>Fix client-overrides not getting extracted by @MelanX in #1120</li>
+          <li>Switch to official launcher auth by @Geometrically in #1118</li>
+          <li>Fix java installs by @Geometrically in #1123</li>
+          <li>Bump to 0.7.0 + Add sign-in error by @Geometrically in #1133</li>
+          <li>fix: version page by @ToBinio in #1121</li>
+        </ul>
+        <p>New Contributors</p>
+        <ul>
+          <li>@KnifesmithCode made their first contribution in #1087</li>
+          <li>@MelanX made their first contribution in #1120</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.6.3" date="2023-12-14" type="stable">
       <url>https://github.com/modrinth/theseus/releases/tag/v0.6.3</url>
       <description>
