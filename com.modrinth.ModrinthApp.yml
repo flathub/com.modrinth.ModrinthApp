@@ -89,6 +89,24 @@ modules:
           type: git
           tag-pattern: ^v([\\d.]+)$
 
+  # For gamemode support
+  - name: gamemode
+    buildsystem: meson
+    config-opts:
+      - -Dwith-sd-bus-provider=no-daemon
+      - -Dwith-examples=false
+    post-install:
+      # gamemoderun is not installed with no-daemon
+      - install -Dm755 ../data/gamemoderun $FLATPAK_DEST/bin/gamemoderun
+    sources:
+      - type: git
+        url: https://github.com/FeralInteractive/gamemode.git
+        tag: 1.8.1
+        commit: 5180d89e66830d87f69687b95fb86f622552b94b
+        x-checker-data:
+          type: git
+          tag-pattern: ^[\\d.]+$
+
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
   # for some controller mods (see https://github.com/isXander/Controlify/issues/31)
