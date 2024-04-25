@@ -153,3 +153,13 @@ modules:
           timestamp-query: '.published_at'
           url-query: |
             "https://launcher-files.modrinth.com/versions/\($version)/linux/modrinth-app_\($version)_amd64.AppImage"
+
+  # Wrap the executable in a wrapper to run scripts before running it
+  - name: wrapper
+    buildsystem: simple
+    build-commands:
+      - mv $FLATPAK_DEST/bin/modrinth-app $FLATPAK_DEST/bin/modrinth-app-wrapped
+      - install -Dm755 modrinth-app-wrapper.sh $FLATPAK_DEST/bin/modrinth-app
+    sources:
+      - type: file
+        path: modrinth-app-wrapper.sh
