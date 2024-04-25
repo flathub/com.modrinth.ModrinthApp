@@ -1,7 +1,7 @@
 id: com.modrinth.ModrinthApp
 
 runtime: org.gnome.Platform
-runtime-version: "45"
+runtime-version: '45'
 sdk: org.gnome.Sdk//45
 
 rename-icon: modrinth-app
@@ -19,8 +19,8 @@ modules:
   - name: webkit2gtk-4.0
     sources:
       - type: archive
-        url: https://webkitgtk.org/releases/webkitgtk-2.44.0.tar.xz
-        sha256: c66530e41ba59b1edba4ee89ef20b2188e273bed0497e95084729e3cfbe30c87
+        url: https://webkitgtk.org/releases/webkitgtk-2.44.1.tar.xz
+        sha256: 425b1459b0f04d0600c78d1abb5e7edfa3c060a420f8b231e9a6a2d5d29c5561
         x-checker-data:
           type: html
           url: https://webkitgtk.org/releases/
@@ -47,7 +47,7 @@ modules:
             url: https://dotat.at/prog/unifdef/unifdef-2.12.tar.xz
             sha256: 43ce0f02ecdcdc723b2475575563ddb192e988c886d368260bc0a63aee3ac400
         cleanup:
-          - "*"
+          - '*'
 
   - name: openssl11
     buildsystem: simple
@@ -59,8 +59,8 @@ modules:
       - /bin
       - /include
       - /lib/pkgconfig
-      - "*.a"
-      - "*.la"
+      - '*.a'
+      - '*.la'
     sources:
       - type: archive
         url: https://www.openssl.org/source/openssl-1.1.1w.tar.gz
@@ -79,7 +79,7 @@ modules:
     cleanup:
       - /bin
       - /include
-      - "*.a"
+      - '*.a'
     sources:
       - type: git
         url: https://github.com/festvox/flite.git
@@ -130,8 +130,8 @@ modules:
         x-checker-data:
           type: json
           url: https://api.github.com/repos/modrinth/theseus/releases/latest
-          tag-query: '.tag_name'
-          version-query: '$tag | sub("v";"")'
-          timestamp-query: '.published_at'
+          tag-query: .tag_name
+          version-query: $tag | sub("v";"")
+          timestamp-query: .published_at
           url-query: |
             "https://launcher-files.modrinth.com/versions/\($version)/linux/modrinth-app_\($version)_amd64.AppImage"
