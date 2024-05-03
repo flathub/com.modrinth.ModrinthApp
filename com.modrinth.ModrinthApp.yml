@@ -87,7 +87,7 @@ modules:
         commit: e9e2e37c329dbe98bfeb27a1828ef9a71fa84f88
         x-checker-data:
           type: git
-          tag-pattern: ^v([\\d.]+)$
+          tag-pattern: ^v([\d.]+)$
 
   # For gamemode support
   - name: gamemode
@@ -105,7 +105,7 @@ modules:
         commit: 5180d89e66830d87f69687b95fb86f622552b94b
         x-checker-data:
           type: git
-          tag-pattern: ^[\\d.]+$
+          tag-pattern: ^([\d.]+)$
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
