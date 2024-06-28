@@ -7,6 +7,7 @@ sdk: org.gnome.Sdk//46
 rename-icon: modrinth-app
 command: modrinth-app
 finish-args:
+  - --filesystem=xdg-download:ro # allows for drag and drop inside of minecraft
   - --filesystem=xdg-run/app/com.discordapp.Discord:create # allows for discord rpc
   - --device=all
   - --share=ipc
