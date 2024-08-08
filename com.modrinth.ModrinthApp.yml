@@ -148,7 +148,7 @@ modules:
         only-arches: [x86_64]
         x-checker-data:
           type: json
-          url: https://api.github.com/repos/modrinth/theseus/releases/latest
+          url: https://api.github.com/repos/modrinth/code/releases/latest
           tag-query: .tag_name
           version-query: $tag | sub("v";"")
           timestamp-query: .published_at
