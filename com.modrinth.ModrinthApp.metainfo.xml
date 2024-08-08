@@ -8,9 +8,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
   <url type="homepage">https://modrinth.com</url>
-  <url type="bugtracker">https://github.com/modrinth/theseus/issues</url>
-  <url type="vcs-browser">https://github.com/modrinth/theseus</url>
-  <url type="contribute">https://github.com/modrinth/theseus</url>
+  <url type="bugtracker">https://github.com/modrinth/code/issues</url>
+  <url type="vcs-browser">https://github.com/modrinth/code</url>
+  <url type="contribute">https://github.com/modrinth/code</url>
   <description>
     <p>A unique, open source launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package</p>
   </description>
@@ -26,7 +26,7 @@
   </screenshots>
   <releases>
     <release version="0.7.1" date="2024-04-24" type="stable">
-      <url>https://github.com/modrinth/theseus/releases/tag/v0.7.1</url>
+      <url>https://github.com/modrinth/code/releases/tag/v0.7.1</url>
       <description>
         <p>Modrinth App v0.7.1 added support for Minecraft 1.20.5 and fixed a ton of bugs and issues.</p>
         <p>Main improvements ⭐</p>
@@ -53,7 +53,7 @@
       </description>
     </release>
     <release version="0.7.0" date="2024-04-23" type="stable">
-      <url>https://github.com/modrinth/theseus/releases/tag/v0.7.0</url>
+      <url>https://github.com/modrinth/code/releases/tag/v0.7.0</url>
       <description>
         <p>What's Changed</p>
         <ul>
@@ -77,7 +77,7 @@
       </description>
     </release>
     <release version="0.6.3" date="2023-12-14" type="stable">
-      <url>https://github.com/modrinth/theseus/releases/tag/v0.6.3</url>
+      <url>https://github.com/modrinth/code/releases/tag/v0.6.3</url>
       <description>
         <p>What's changed</p>
         <ul>
