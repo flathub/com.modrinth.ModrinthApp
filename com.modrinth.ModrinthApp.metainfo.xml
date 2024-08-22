@@ -25,6 +25,22 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.8.2" date="2024-08-22" type="stable">
+      <url>https://blog.modrinth.com/p/introducing-modrinth-refreshed-site-look-new-advertising-system</url>
+      <description>
+        <p>Over the last few months, we’ve been overhauling the internals of the Modrinth App to drastically improve performance and stability. Over one hundred issues have been closed with this update alone! Here’s a short list of the major changes:</p>
+        <ul>
+          <li>Newer versions of Forge and NeoForge now work!</li>
+          <li>Migrated internal launcher data to use SQLite. The app now loads in less than 40ms on average (compared to ~2.5s before)!</li>
+          <li>Fixed issues where profiles could disappear in the UI</li>
+          <li>Fixed random cases of the UI freezing up during actions</li>
+          <li>Fixed directory changes being very inconsistent</li>
+          <li>Drastically improved offline mode</li>
+          <li>Fix freezing and include crash reports logs tab</li>
+          <li>And over one hundred more fixes!</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.1" date="2024-04-24" type="stable">
       <url>https://github.com/modrinth/code/releases/tag/v0.7.1</url>
       <description>
