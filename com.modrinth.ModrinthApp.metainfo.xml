@@ -25,6 +25,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.8.5" date="2024-08-30" type="stable">
+      <description></description>
+    </release>
     <release version="0.8.2" date="2024-08-22" type="stable">
       <url>https://blog.modrinth.com/p/introducing-modrinth-refreshed-site-look-new-advertising-system</url>
       <description>
