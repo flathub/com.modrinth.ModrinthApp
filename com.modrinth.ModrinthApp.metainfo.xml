@@ -24,6 +24,9 @@
   <url type="contribute">https://github.com/modrinth/code</url>
   <launchable type="desktop-id">com.modrinth.ModrinthApp.desktop</launchable>
   <releases>
+    <release version="0.8.8" date="2024-10-02">
+      <description></description>
+    </release>
     <release version="0.8.7" date="2024-09-10" type="stable">
       <description>Small hotfix update fixing a regression causing profile icons not to be able to be set!</description>
     </release>
