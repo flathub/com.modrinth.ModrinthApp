@@ -1,8 +1,8 @@
 id: com.modrinth.ModrinthApp
 
 runtime: org.gnome.Platform
-runtime-version: '46'
-sdk: org.gnome.Sdk//46
+runtime-version: '47'
+sdk: org.gnome.Sdk//47
 
 command: modrinth-app
 finish-args:
@@ -15,8 +15,8 @@ finish-args:
   - --socket=x11
   - --socket=wayland
 
-rename-desktop-file: modrinth-app.desktop
-rename-icon: modrinth-app
+rename-desktop-file: Modrinth App.desktop
+rename-icon: ModrinthApp
 
 modules:
   # for the in-game narrator
@@ -72,15 +72,16 @@ modules:
         desktop-file-edit \
           --set-comment="Modrinth's game launcher" \
           --set-icon="$FLATPAK_ID" \
+          --set-key="Exec" --set-value="modrinth-app" \
           --set-key="StartupNotify" --set-value="true" \
           --set-key="Categories" --set-value="Game;ActionGame;AdventureGame;Simulation;" \
           --set-key="Keywords" --set-value="game;minecraft;mc;" \
           --set-key="StartupWMClass" --set-value="ModrinthApp" \
-          squashfs-root/usr/share/applications/modrinth-app.desktop
+          "squashfs-root/usr/share/applications/Modrinth App.desktop"
 
       - mkdir -p /app/{bin,share}
       - cp -r squashfs-root/usr/share/{applications,icons} /app/share/
-      - install -Dm755 squashfs-root/usr/bin/modrinth-app /app/bin/modrinth-app
+      - install -Dm755 squashfs-root/usr/bin/ModrinthApp /app/bin/modrinth-app
       - install -Dm644 com.modrinth.ModrinthApp.metainfo.xml /app/share/metainfo/com.modrinth.ModrinthApp.metainfo.xml
 
     sources:
@@ -88,9 +89,9 @@ modules:
         path: com.modrinth.ModrinthApp.metainfo.xml
 
       - type: file
-        url: https://launcher-files.modrinth.com/versions/0.8.7/linux/Modrinth%20App_0.8.7_amd64.AppImage
+        url: https://launcher-files.modrinth.com/versions/0.8.8/linux/Modrinth%20App_0.8.8_amd64.AppImage
         dest-filename: ModrinthApp.AppImage
-        sha256: 7c874ec6c972478fc0a02abcdda64a7292f9c4777bb8e02cc5496237b9044670
+        sha256: d2aa1bbb32199ff10d7990a8e7d9aace8a00b40d662bd00b262a30e7acc6059c
         only-arches: [x86_64]
         x-checker-data:
           type: json
