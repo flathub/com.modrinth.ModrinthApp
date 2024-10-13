@@ -1,8 +1,8 @@
 id: com.modrinth.ModrinthApp
 
 runtime: org.gnome.Platform
-runtime-version: '46'
-sdk: org.gnome.Sdk//46
+runtime-version: '47'
+sdk: org.gnome.Sdk//47
 
 command: modrinth-app
 finish-args:
