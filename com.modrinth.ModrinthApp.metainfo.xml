@@ -24,6 +24,9 @@
   <url type="contribute">https://github.com/modrinth/code</url>
   <launchable type="desktop-id">com.modrinth.ModrinthApp.desktop</launchable>
   <releases>
+    <release version="0.8.9" date="2024-10-16">
+      <description></description>
+    </release>
     <release version="0.8.8" date="2024-10-04" type="stable">
       <description>
         <p>A small patch update to fix some bugs and common issues in the Modrinth App</p>
