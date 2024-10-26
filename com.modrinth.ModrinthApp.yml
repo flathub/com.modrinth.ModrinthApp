@@ -38,24 +38,6 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
 
-  # For gamemode support
-  - name: gamemode
-    buildsystem: meson
-    config-opts:
-      - -Dwith-sd-bus-provider=no-daemon
-      - -Dwith-examples=false
-    post-install:
-      # gamemoderun is not installed with no-daemon
-      - install -Dm755 ../data/gamemoderun $FLATPAK_DEST/bin/gamemoderun
-    sources:
-      - type: git
-        url: https://github.com/FeralInteractive/gamemode.git
-        tag: 1.8.2
-        commit: c54d6d4243b0dd0afcb49f2c9836d432da171a2b
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
-
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
   # for some controller mods (see https://github.com/isXander/Controlify/issues/31)
@@ -89,9 +71,9 @@ modules:
         path: com.modrinth.ModrinthApp.metainfo.xml
 
       - type: file
-        url: https://launcher-files.modrinth.com/versions/0.8.8/linux/Modrinth%20App_0.8.8_amd64.AppImage
+        url: https://launcher-files.modrinth.com/versions/0.8.9/linux/Modrinth%20App_0.8.9_amd64.AppImage
         dest-filename: ModrinthApp.AppImage
-        sha256: d2aa1bbb32199ff10d7990a8e7d9aace8a00b40d662bd00b262a30e7acc6059c
+        sha256: 6a278a61b428367fd85e9c8d4baf0b2ba033bff3610748f471afe4b9b23d6d44
         only-arches: [x86_64]
         x-checker-data:
           type: json
