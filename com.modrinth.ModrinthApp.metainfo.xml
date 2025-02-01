@@ -12,6 +12,7 @@
     <category>ActionGame</category>
     <category>AdventureGame</category>
     <category>Simulation</category>
+    <category>PackageManager</category>
   </categories>
   <keywords>
     <keyword>game</keyword>
