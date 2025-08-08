@@ -425,7 +425,7 @@
   </releases>
   <provides>
     <binary>modrinth-app</binary>
-    <mediatype>application/zip+mrpack</mediatype>
+    <mediatype>application/x-modrinth-modpack+zip</mediatype>
     <mediatype>x-scheme-handler/modrinth</mediatype>
   </provides>
   <project_license>GPL-3.0-only</project_license>
