@@ -2,7 +2,7 @@ id: com.modrinth.ModrinthApp
 
 runtime: org.gnome.Platform
 runtime-version: '49'
-sdk: org.gnome.Sdk//49
+sdk: org.gnome.Sdk
 
 command: modrinth-app
 finish-args:
@@ -41,8 +41,8 @@ modules:
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
-  # for some controller mods (see https://github.com/isXander/Controlify/issues/31)
-  - shared-modules/libusb/libusb.json
+  # Some controller mods require libusb (see https://github.com/isXander/Controlify/issues/31)
+  # Indeed, it is already provided by the runtime
 
   # TODO: compile from source (preferably before the launcher supports arm on linux)
   - name: modrinth-app
