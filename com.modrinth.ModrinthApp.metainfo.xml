@@ -5,8 +5,12 @@
   <name>Modrinth App</name>
   <summary>Modrinth's game launcher</summary>
   <description>
-    <p>A unique, open source launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package</p>
+    <p>A unique, open source Minecraft launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package</p>
   </description>
+  <branding>
+    <color type="primary" scheme_preference="light">#81f3af</color>
+    <color type="primary" scheme_preference="dark">#033018</color>
+  </branding>
   <categories>
     <category>Game</category>
     <category>ActionGame</category>
@@ -25,7 +29,15 @@
   <launchable type="desktop-id">com.modrinth.ModrinthApp.desktop</launchable>
   <releases>
     <release version="0.10.26" date="2026-01-15">
-      <description></description>
+      <description>
+        <p>Improvements</p>
+        <ul>
+          <li>Fixed many checkboxes not having labels for screen readers.</li>
+          <li>Fixed 'Jump back in' setting not working sometimes.</li>
+          <li>Fixed crash issues when opening folders.</li>
+        </ul>
+        <p>Many other changes since the previous flatpak-supported version 0.10.15. See our GitHub releases page for more info.</p>
+      </description>
     </release>
     <release version="0.10.15" date="2025-10-27">
       <description/>
@@ -441,11 +453,11 @@
   <screenshots>
     <screenshot type="default">
       <caption>The home screen of the app</caption>
-      <image>https://cdn-raw.modrinth.com/app-landing/app-screenshot.png</image>
+      <image>https://cdn-raw.modrinth.com/app-landing/app-screenshot.webp</image>
     </screenshot>
     <screenshot>
-      <caption>The instance log view</caption>
-      <image>https://cdn-raw.modrinth.com/app-landing/cobblemon-launcher.png</image>
+      <caption>An instance of Cobblemon in the app</caption>
+      <image>https://cdn-raw.modrinth.com/app-landing/cobblemon-launcher.webp</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
