@@ -7,6 +7,10 @@
   <description>
     <p>A unique, open source Minecraft launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package</p>
   </description>
+  <branding>
+    <color type="primary" scheme_preference="light">#81f3af</color>
+    <color type="primary" scheme_preference="dark">#033018</color>
+  </branding>
   <categories>
     <category>Game</category>
     <category>ActionGame</category>
