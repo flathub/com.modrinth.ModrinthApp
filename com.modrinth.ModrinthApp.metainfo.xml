@@ -36,7 +36,7 @@
           <li>Fixed 'Jump back in' setting not working sometimes.</li>
           <li>Fixed crash issues when opening folders.</li>
         </ul>
-        <p>Many other changes since the previous flatpak-supported version 0.10.15. See our <a href="https://github.com/modrinth/code/releases">GitHub releases</a> page for more info.</p>
+        <p>Many other changes since the previous flatpak-supported version 0.10.15. See our GitHub releases page for more info.</p>
       </description>
     </release>
     <release version="0.10.15" date="2025-10-27">
