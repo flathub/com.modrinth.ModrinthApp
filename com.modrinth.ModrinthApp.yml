@@ -6,7 +6,6 @@ sdk: org.gnome.Sdk
 
 command: modrinth-app
 finish-args:
-  - --require-version=1.16.0
   - --filesystem=xdg-download:ro # allow drag and drop from downloads
   - --filesystem=xdg-run/app/com.discordapp.Discord:create # allows for discord rpc
   - --device=dri
