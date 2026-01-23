@@ -8,13 +8,18 @@ command: modrinth-app
 finish-args:
   - --filesystem=xdg-download:ro # allow drag and drop from downloads
   - --filesystem=xdg-run/app/com.discordapp.Discord:create # allows for discord rpc
+  - --device=dri
+  # We can't use this yet, see <https://github.com/flatpak/flatpak/issues/5681>
+  # So we have to use device=all
+  # - --device=input
   - --device=all
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
-  - --socket=x11
   - --socket=wayland
+  - --socket=fallback-x11
   - --env=MODRINTH_EXTERNAL_UPDATE_PROVIDER=1
+  - --env=MODRINTH_APP_SOURCE=flatpak
 
 rename-desktop-file: Modrinth App.desktop
 rename-icon: ModrinthApp
