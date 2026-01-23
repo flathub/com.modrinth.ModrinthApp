@@ -29,7 +29,13 @@
   <launchable type="desktop-id">com.modrinth.ModrinthApp.desktop</launchable>
   <releases>
     <release version="0.10.27" date="2026-01-23">
-      <description></description>
+      <description>
+        <p>Improvements</p>
+        <ul>
+          <li>Fixed installing content from Discover refusing to create NeoForge instances.</li>
+          <li>Added circuit-breaker logic to prevent Modrinth App from spamming API requests during downtime.</li>
+        </ul>
+      </description>
     </release>
     <release version="0.10.26" date="2026-01-15">
       <description>
