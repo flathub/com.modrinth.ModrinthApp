@@ -66,10 +66,10 @@ modules:
           --set-key="StartupWMClass" --set-value="ModrinthApp" \
           "squashfs-root/usr/share/applications/Modrinth App.desktop"
 
-      - mkdir -p /app/{bin,share}
-      - cp -r squashfs-root/usr/share/{applications,icons} /app/share/
-      - install -Dm755 squashfs-root/usr/bin/ModrinthApp /app/bin/modrinth-app
-      - install -Dm644 com.modrinth.ModrinthApp.metainfo.xml /app/share/metainfo/com.modrinth.ModrinthApp.metainfo.xml
+      - mkdir -p "$FLATPAK_DEST"/{bin,share}
+      - cp -r squashfs-root/usr/share/{applications,icons} "$FLATPAK_DEST"/share/
+      - install -Dm755 squashfs-root/usr/bin/ModrinthApp "$FLATPAK_DEST"/bin/modrinth-app
+      - install -Dm644 com.modrinth.ModrinthApp.metainfo.xml "$FLATPAK_DEST"/share/metainfo/com.modrinth.ModrinthApp.metainfo.xml
 
     sources:
       - type: file
