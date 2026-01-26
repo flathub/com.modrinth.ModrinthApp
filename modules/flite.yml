@@ -2,11 +2,8 @@ name: flite
 buildsystem: autotools
 config-opts:
   - --enable-shared
+  - --with-audio=pulseaudio
 no-parallel-make: true
-cleanup:
-  - /bin
-  - /include
-  - '*.a'
 sources:
   - type: git
     url: https://github.com/festvox/flite.git
@@ -15,3 +12,7 @@ sources:
     x-checker-data:
       type: git
       tag-pattern: ^v([\d.]+)$
+cleanup:
+  - /bin
+  - /include
+  - /lib/*.a
