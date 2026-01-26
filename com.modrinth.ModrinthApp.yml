@@ -25,8 +25,11 @@ rename-desktop-file: Modrinth App.desktop
 rename-icon: ModrinthApp
 
 modules:
-  # for the in-game narrator
+  # For the in-game narrator
   - modules/flite/flite.yml
+
+  # Required for older versions of Minecraft
+  - modules/xrandr.yml
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
