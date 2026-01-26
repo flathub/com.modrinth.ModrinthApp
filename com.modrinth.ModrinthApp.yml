@@ -39,6 +39,15 @@ modules:
   # Some controller mods require libusb (see https://github.com/isXander/Controlify/issues/31)
   # Indeed, it is already provided by the runtime
 
+  # Helper script used to wrap instances with the proper configuration for dGPUs
+  - name: prime-run
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 prime-run "$FLATPAK_DEST"/bin/prime-run
+    sources:
+      - type: file
+        path: prime-run
+
   # TODO: compile from source (preferably before the launcher supports arm on linux)
   - name: modrinth-app
     buildsystem: simple
