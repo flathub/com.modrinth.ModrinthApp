@@ -12,6 +12,8 @@ sources:
     x-checker-data:
       type: git
       tag-pattern: ^v([\d.]+)$
+  - type: patch
+    path: 0001-fix-pipewire.patch
 cleanup:
   - /bin
   - /include

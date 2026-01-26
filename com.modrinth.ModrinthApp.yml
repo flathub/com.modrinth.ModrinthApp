@@ -26,7 +26,7 @@ rename-icon: ModrinthApp
 
 modules:
   # for the in-game narrator
-  - modules/flite.yml
+  - modules/flite/flite.yml
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
