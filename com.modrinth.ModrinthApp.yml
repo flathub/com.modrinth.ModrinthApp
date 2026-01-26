@@ -26,23 +26,7 @@ rename-icon: ModrinthApp
 
 modules:
   # for the in-game narrator
-  - name: flite
-    buildsystem: autotools
-    config-opts:
-      - --enable-shared
-    no-parallel-make: true
-    cleanup:
-      - /bin
-      - /include
-      - '*.a'
-    sources:
-      - type: git
-        url: https://github.com/festvox/flite.git
-        tag: v2.2
-        commit: e9e2e37c329dbe98bfeb27a1828ef9a71fa84f88
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+  - modules/flite.yml
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
