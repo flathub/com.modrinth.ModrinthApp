@@ -28,6 +28,9 @@ modules:
   # For the in-game narrator
   - modules/flite/flite.yml
 
+  # Used by TinyFileDialogs from LWJGL
+  - modules/xprop/xprop.yml
+
   # Required for older versions of Minecraft
   - modules/xrandr.yml
 
