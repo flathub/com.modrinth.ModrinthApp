@@ -25,29 +25,28 @@ rename-desktop-file: Modrinth App.desktop
 rename-icon: ModrinthApp
 
 modules:
-  # for the in-game narrator
-  - name: flite
-    buildsystem: autotools
-    config-opts:
-      - --enable-shared
-    no-parallel-make: true
-    cleanup:
-      - /bin
-      - /include
-      - '*.a'
-    sources:
-      - type: git
-        url: https://github.com/festvox/flite.git
-        tag: v2.2
-        commit: e9e2e37c329dbe98bfeb27a1828ef9a71fa84f88
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+  # For the in-game narrator
+  - modules/flite/flite.yml
+
+  # Used by TinyFileDialogs from LWJGL
+  - modules/xprop/xprop.yml
+
+  # Required for older versions of Minecraft
+  - modules/xrandr.yml
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
   # Some controller mods require libusb (see https://github.com/isXander/Controlify/issues/31)
   # Indeed, it is already provided by the runtime
+
+  # Helper script used to wrap instances with the proper configuration for dGPUs
+  - name: prime-run
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 prime-run "$FLATPAK_DEST"/bin/prime-run
+    sources:
+      - type: file
+        path: prime-run
 
   # TODO: compile from source (preferably before the launcher supports arm on linux)
   - name: modrinth-app
@@ -67,10 +66,10 @@ modules:
           --set-key="StartupWMClass" --set-value="ModrinthApp" \
           "squashfs-root/usr/share/applications/Modrinth App.desktop"
 
-      - mkdir -p /app/{bin,share}
-      - cp -r squashfs-root/usr/share/{applications,icons} /app/share/
-      - install -Dm755 squashfs-root/usr/bin/ModrinthApp /app/bin/modrinth-app
-      - install -Dm644 com.modrinth.ModrinthApp.metainfo.xml /app/share/metainfo/com.modrinth.ModrinthApp.metainfo.xml
+      - mkdir -p "$FLATPAK_DEST"/{bin,share}
+      - cp -r squashfs-root/usr/share/{applications,icons} "$FLATPAK_DEST"/share/
+      - install -Dm755 squashfs-root/usr/bin/ModrinthApp "$FLATPAK_DEST"/bin/modrinth-app
+      - install -Dm644 com.modrinth.ModrinthApp.metainfo.xml "$FLATPAK_DEST"/share/metainfo/com.modrinth.ModrinthApp.metainfo.xml
 
     sources:
       - type: file
