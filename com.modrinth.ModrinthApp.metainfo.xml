@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.modrinth.ModrinthApp</id>
   <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
   <name>Modrinth App</name>
   <summary>Modrinth's game launcher</summary>
   <description>
-    <p>A unique, open source Minecraft launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package</p>
+    <p>A unique, open source Minecraft launcher that allows you to play your favorite mods,
+      and keep them up to date, all in one neat little package</p>
   </description>
-  <branding>
-    <color type="primary" scheme_preference="light">#81f3af</color>
-    <color type="primary" scheme_preference="dark">#033018</color>
-  </branding>
-  <categories>
-    <category>Game</category>
-    <category>ActionGame</category>
-    <category>AdventureGame</category>
-    <category>Simulation</category>
-  </categories>
-  <keywords>
-    <keyword>game</keyword>
-    <keyword>minecraft</keyword>
-    <keyword>mc</keyword>
-  </keywords>
   <url type="homepage">https://modrinth.com</url>
   <url type="bugtracker">https://github.com/modrinth/code/issues</url>
   <url type="vcs-browser">https://github.com/modrinth/code</url>
   <url type="contribute">https://github.com/modrinth/code</url>
   <launchable type="desktop-id">com.modrinth.ModrinthApp.desktop</launchable>
+  <developer id="com.modrinth">
+    <name>Rinth, Inc</name>
+  </developer>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-fantasy">moderate</content_attribute>
+    <content_attribute id="social-chat">intense</content_attribute>
+  </content_rating>
+  <provides>
+    <binary>modrinth-app</binary>
+    <mediatype>application/x-modrinth-modpack+zip</mediatype>
+    <mediatype>x-scheme-handler/modrinth</mediatype>
+  </provides>
+  <branding>
+    <color type="primary" scheme_preference="light">#81f3af</color>
+    <color type="primary" scheme_preference="dark">#033018</color>
+  </branding>
+  <screenshots>
+    <screenshot type="default">
+      <caption>The home screen of the app</caption>
+      <image>https://cdn-raw.modrinth.com/app-landing/app-screenshot.webp</image>
+    </screenshot>
+    <screenshot>
+      <caption>An instance of Cobblemon in the app</caption>
+      <image>https://cdn-raw.modrinth.com/app-landing/cobblemon-launcher.webp</image>
+    </screenshot>
+  </screenshots>
   <releases>
     <release version="0.10.29" date="2026-02-10">
       <description></description>
@@ -453,27 +466,4 @@
       </description>
     </release>
   </releases>
-  <provides>
-    <binary>modrinth-app</binary>
-    <mediatype>application/x-modrinth-modpack+zip</mediatype>
-    <mediatype>x-scheme-handler/modrinth</mediatype>
-  </provides>
-  <project_license>GPL-3.0-only</project_license>
-  <developer id="com.modrinth">
-    <name>Rinth, Inc</name>
-  </developer>
-  <screenshots>
-    <screenshot type="default">
-      <caption>The home screen of the app</caption>
-      <image>https://cdn-raw.modrinth.com/app-landing/app-screenshot.webp</image>
-    </screenshot>
-    <screenshot>
-      <caption>An instance of Cobblemon in the app</caption>
-      <image>https://cdn-raw.modrinth.com/app-landing/cobblemon-launcher.webp</image>
-    </screenshot>
-  </screenshots>
-  <content_rating type="oars-1.1">
-    <content_attribute id="violence-fantasy">moderate</content_attribute>
-    <content_attribute id="social-chat">intense</content_attribute>
-  </content_rating>
 </component>
