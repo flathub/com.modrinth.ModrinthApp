@@ -21,7 +21,7 @@ finish-args:
   - --env=MODRINTH_EXTERNAL_UPDATE_PROVIDER=1
   - --env=MODRINTH_APP_SOURCE=flatpak
 
-rename-desktop-file: 'Modrinth App.desktop'
+rename-desktop-file: Modrinth App.desktop
 rename-icon: ModrinthApp
 
 modules:
@@ -76,9 +76,9 @@ modules:
         path: com.modrinth.ModrinthApp.metainfo.xml
 
       - type: file
-        url: https://launcher-files.modrinth.com/versions/0.10.30/linux/Modrinth%20App_0.10.30_amd64.AppImage
+        url: https://launcher-files.modrinth.com/versions/0.11.1/linux/Modrinth%20App_0.11.1_amd64.AppImage
         dest-filename: ModrinthApp.AppImage
-        sha256: d70146167add032653fd36476d7b38b08a89606e1910ce692d4c83dc71b0eeef
+        sha256: d0160970851f05f6e8c7539c460690f6141d2dc56810fae96e91a0c28fb20656
         only-arches: [x86_64]
         x-checker-data:
           type: json
