@@ -63,7 +63,7 @@ modules:
           --set-key="StartupNotify" --set-value="true" \
           --set-key="Categories" --set-value="Game;ActionGame;AdventureGame;Simulation;" \
           --set-key="Keywords" --set-value="game;minecraft;mc;" \
-          --set-key="StartupWMClass" --set-value="ModrinthApp" \
+          --set-key="StartupWMClass" --set-value="com.modrinth.ModrinthApp" \
           "squashfs-root/usr/share/applications/Modrinth App.desktop"
 
       - mkdir -p "$FLATPAK_DEST"/{bin,share}
