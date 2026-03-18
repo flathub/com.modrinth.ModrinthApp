@@ -1,6 +1,6 @@
 # com.modrinth.ModrinthApp
 
-The official Flatpak of the [Modrinth App](https://modrinth.com/app).
+The official Flatpak of [Modrinth App](https://modrinth.com/app).
 
 ## FAQ
 
