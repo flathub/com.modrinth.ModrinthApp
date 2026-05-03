@@ -76,9 +76,9 @@ modules:
         path: com.modrinth.ModrinthApp.metainfo.xml
 
       - type: file
-        url: https://launcher-files.modrinth.com/versions/0.13.8/linux/Modrinth%20App_0.13.8_amd64.AppImage
+        url: https://launcher-files.modrinth.com/versions/0.13.9/linux/Modrinth%20App_0.13.9_amd64.AppImage
         dest-filename: ModrinthApp.AppImage
-        sha256: 27cffa191271acde89911e2eb2c569b6ba9bc07e583a804df0d87a0d231d8843
+        sha256: bca0024a7284838d4073a9bb2d978c9d296a1afbc9f5737695dfbc31701a3289
         only-arches: [x86_64]
         x-checker-data:
           type: json
