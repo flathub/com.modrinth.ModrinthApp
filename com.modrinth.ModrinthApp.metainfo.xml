@@ -28,8 +28,11 @@
   <url type="contribute">https://github.com/modrinth/code</url>
   <launchable type="desktop-id">com.modrinth.ModrinthApp.desktop</launchable>
   <releases>
-    <release version="0.17.6" date="2026-08-13">
+    <release version="0.17.8" date="2026-08-14">
       <description></description>
+    </release>
+    <release version="0.17.6" date="2026-08-13">
+      <description/>
     </release>
     <release version="0.17.4" date="2026-08-07">
       <description/>
