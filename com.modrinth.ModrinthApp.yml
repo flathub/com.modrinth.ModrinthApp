@@ -18,7 +18,7 @@ finish-args:
   - --share=network
   - --socket=pulseaudio
   - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --env=MODRINTH_EXTERNAL_UPDATE_PROVIDER=1
   - --env=MODRINTH_APP_SOURCE=flatpak
 
