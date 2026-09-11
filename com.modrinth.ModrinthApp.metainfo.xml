@@ -3,9 +3,11 @@
   <id>com.modrinth.ModrinthApp</id>
   <metadata_license>CC0-1.0</metadata_license>
   <name>Modrinth App</name>
-  <summary>Modrinth's game launcher</summary>
+  <summary>Play modded Minecraft with ease</summary>
   <description>
-    <p>A unique, open source Minecraft launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package</p>
+    <p>A unique, open source Minecraft launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package.</p>
+    <p>Modrinth App is the easiest way to install and play content from Modrinth with whatever Minecraft version or mod loader you'd like. With first-party support for shared instances, friends, and Modrinth Hosting, Modrinth App aims to make playing with friends just as easy as playing singleplayer.</p>
+    <p>You can sync your settings across instances, making it quicker than ever to jump right into a new modpack. Browse for servers and join them (yes, even modded ones) with just a click. Customize and switch between your skins, with added support for the Ears mod! View all your screenshots in one place, and manage your Modrinth Hosting servers all without ever leaving the app.</p>
   </description>
   <branding>
     <color type="primary" scheme_preference="light">#81f3af</color>
