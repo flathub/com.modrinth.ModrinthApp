@@ -1,7 +1,7 @@
 id: com.modrinth.ModrinthApp
 
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 
 command: modrinth-app
@@ -9,11 +9,9 @@ finish-args:
   - --filesystem=xdg-download:ro # allow drag and drop from downloads
   - --filesystem=xdg-run/app/com.discordapp.Discord:create # allows for discord rpc (flatpak)
   - --filesystem=xdg-run/discord-ipc-0 # allows for discord rpc
-  # We can't use this yet, see <https://github.com/flatpak/flatpak/issues/5681>
-  # So we have to use device=all
-  # - --device=dri
-  # - --device=input
-  - --device=all
+  - --device-if=all:!has-input-device
+  - --device=input
+  - --device=dri
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
