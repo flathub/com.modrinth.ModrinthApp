@@ -47,7 +47,7 @@ modules:
       - type: file
         path: prime-run
 
-  # TODO: compile from source (preferably before the launcher supports arm on linux)
+  # TODO: compile from source
   - name: modrinth-app
     buildsystem: simple
     build-commands:
@@ -75,9 +75,9 @@ modules:
         path: com.modrinth.ModrinthApp.metainfo.xml
 
       - type: file
-        url: https://launcher-files.modrinth.com/versions/0.23.1/linux/Modrinth%20App_0.23.1_amd64.AppImage
+        url: https://launcher-files.modrinth.com/versions/0.23.3/linux/Modrinth%20App_0.23.3_amd64.AppImage
         dest-filename: ModrinthApp.AppImage
-        sha256: feb04bf6f38e23a4354c5ff46a0d690a1a587327b1df9ddacc779470fa6f2f09
+        sha256: 69613661437263262bf2f34c601d6d06f861011b9e882a6736cc7d5cf3fa3b6a
         only-arches: [x86_64]
         x-checker-data:
           type: json
@@ -85,6 +85,18 @@ modules:
           version-query: .version
           url-query: |
             "https://launcher-files.modrinth.com/versions/\($version)/linux/Modrinth%20App_\($version)_amd64.AppImage"
+
+      - type: file
+        url: https://launcher-files.modrinth.com/versions/0.23.3/linux/Modrinth%20App_0.23.3_aarch64.AppImage
+        dest-filename: ModrinthApp.AppImage
+        sha256: ea7ddd3a32cde1b896a928087fa5668959ddb124f68acd58b7235befb43360a8
+        only-arches: [aarch64]
+        x-checker-data:
+          type: json
+          url: https://launcher-files.modrinth.com/updates.json
+          version-query: .version
+          url-query: |
+            "https://launcher-files.modrinth.com/versions/\($version)/linux/Modrinth%20App_\($version)_aarch64.AppImage"
 
   # Wrap the executable in a wrapper to run scripts before running it
   - name: wrapper
