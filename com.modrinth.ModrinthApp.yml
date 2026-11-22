@@ -34,6 +34,18 @@ finish-args:
   - --filesystem=/var/lib/flatpak/app/io.github.wivrn.wivrn:ro
   # SteamVR needs shared memory
   - --device=shm
+  # JVM hugepages support (-XX:+UseLargePages, -XX:+UseTransparentHugePages)
+  - --filesystem=/sys/kernel/mm/hugepages:ro
+  - --filesystem=/sys/kernel/mm/transparent_hugepage:ro
+  # Importing instances from other launchers
+  - --filesystem=xdg-data/PrismLauncher:ro
+  - --filesystem=~/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher:ro
+  - --filesystem=xdg-data/multimc:ro
+  - --filesystem=xdg-data/MultiMC:ro
+  - --filesystem=xdg-data/ATLauncher:ro
+  - --filesystem=xdg-data/gdlauncher_next:ro
+  - --filesystem=~/curseforge/minecraft:ro
+  - --filesystem=xdg-documents/curseforge/minecraft:ro
 
 rename-desktop-file: Modrinth App.desktop
 rename-icon: ModrinthApp
@@ -61,6 +73,30 @@ modules:
     sources:
       - type: file
         path: prime-run
+
+  # Feral GameMode, so gamemoderun can be used as an instance wrapper command
+  - name: gamemode
+    buildsystem: meson
+    config-opts:
+      - -Dwith-sd-bus-provider=no-daemon
+      - -Dwith-examples=false
+    post-install:
+      - install -Dm755 ../data/gamemoderun -t /app/bin
+    sources:
+      - type: archive
+        dest-filename: gamemode.tar.gz
+        url: https://api.github.com/repos/FeralInteractive/gamemode/tarball/1.8.2
+        sha256: 2886d4ce543c78bd2a364316d5e7fd59ef06b71de63f896b37c6d3dc97658f60
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/FeralInteractive/gamemode/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
+          timestamp-query: .published_at
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+      - /lib/libgamemodeauto.a
 
   # TODO: compile from source
   - name: modrinth-app
