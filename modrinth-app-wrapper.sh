@@ -10,5 +10,9 @@ if [ "$(uname -m)" = "aarch64" ] && [ "$XDG_CURRENT_DESKTOP" = "gamescope" ] && 
     export SDL_VIDEO_FORCE_EGL=1
 fi
 
+# Expose the Flathub gamescope and MangoHud extensions for use as instance wrapper commands
+export PATH="${PATH}${PATH:+:}/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/MangoHud/bin"
+export VK_LAYER_PATH="/usr/lib/extensions/vulkan/share/vulkan/implicit_layer.d/"
+
 # argv[0] becomes the Wayland app_id, which must match the desktop file name
 exec -a "$FLATPAK_ID" /app/bin/modrinth-app-wrapped "$@"
