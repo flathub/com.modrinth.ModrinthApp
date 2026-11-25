@@ -19,6 +19,21 @@ finish-args:
   - --socket=x11
   - --env=MODRINTH_EXTERNAL_UPDATE_PROVIDER=1
   - --env=MODRINTH_APP_SOURCE=flatpak
+  # VR: OpenXR/OpenVR runtime config
+  - --filesystem=xdg-config/openxr:ro
+  - --filesystem=xdg-config/openvr:ro
+  # SteamVR (SteamOS)
+  - --filesystem=/opt/steamvr:ro
+  - --filesystem=xdg-run/xrservice-ipc
+  # SteamVR (desktop Steam, Debian/Ubuntu Steam)
+  - --filesystem=~/.local/share/Steam/steamapps/common/SteamVR:ro
+  - --filesystem=~/.steam/debian-installation/steamapps/common/SteamVR:ro
+  # WiVRn (Flatpak)
+  - --filesystem=xdg-run/wivrn:ro
+  - --filesystem=xdg-data/flatpak/app/io.github.wivrn.wivrn:ro
+  - --filesystem=/var/lib/flatpak/app/io.github.wivrn.wivrn:ro
+  # SteamVR needs shared memory
+  - --device=shm
   # JVM hugepages support (-XX:+UseLargePages, -XX:+UseTransparentHugePages)
   - --filesystem=/sys/kernel/mm/hugepages:ro
   - --filesystem=/sys/kernel/mm/transparent_hugepage:ro
